@@ -90,6 +90,7 @@ else
                 puts "Downloading #{song.title} by #{song.artist}"
                 it = File.new(File.join(album_dir, "#{song.number.to_s.rjust(2, "0")} - #{song.title.gsub('/', '-')}.mp3"), 'w+')
                 it << song.data(remote:true)
+                puts "Finished Downloading #{song.title}"
             end
         end
     end
